@@ -82,7 +82,7 @@ body {
 }
 
 .nav-item:hover a {
-  border-bottom: 2px solid var(--primaryColor);
+  border-bottom: 3px solid var(--primaryColor);
 }
 
 .logo-header {
@@ -118,13 +118,13 @@ body {
 }
 
 .fa-cart-plus {
-  color: var(--primaryColor);
+  color: hsl(0, 0%, 100%);
   /* background-color: yellow; */
   font-size: 1.5rem;
   position: relative;
 }
 
-.cart-amount {
+/* .cart-amount {
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -134,7 +134,7 @@ body {
   color: white;
   padding: 0.15em;
   border-radius: 50%;
-}
+} */
 /**********************************************
 ** Header including Navigation and Hero end  
 ***********************************************/
