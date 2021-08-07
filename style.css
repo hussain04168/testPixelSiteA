@@ -21,6 +21,10 @@ li {
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+main {
+  padding: 0 4.75rem;
+}
 /**************************
  ** Reset end
 ***************************/
@@ -30,6 +34,8 @@ body {
 ***************************/
 :root {
   --primaryColor: hsl(208, 33%, 47%);
+  --secondaryColor: hsl(243, 100%, 69%);
+  --thirdColor: hsl(180, 100%, 50%);
   --mainFontColor: hsl(0, 0%, 15%);
   --mainFontSize: 18px;
   --letterSpacing: 0.15em;
@@ -138,3 +144,107 @@ body {
 /**********************************************
 ** Header including Navigation and Hero end  
 ***********************************************/
+
+/*****************************************************
+** Latest collection section including carousel start  
+*****************************************************/
+.latest-apparel-container {
+  margin: 1.25rem auto;
+  /* background-color: salmon; */
+}
+
+.latest-title {
+  background-image: linear-gradient(
+    90deg,
+    var(--primaryColor),
+    var(--thirdColor)
+  );
+  text-align: center;
+  padding: 1em;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.latest-carousel-container {
+  display: flex;
+  /* background-color: rosybrown; */
+  justify-content: space-between;
+  /* border: 2px solid black; */
+  margin-top: 1.5rem;
+  padding: 1rem 0.5rem;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.35);
+}
+
+.latest-carousel {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 0 0.5rem;
+}
+
+.carousel-btn {
+  font-size: 2.5rem;
+  height: max-content;
+  align-self: center;
+  padding: 0.65em 0.35em;
+  background-color: hsl(0, 0%, 90%);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+  background-color: hsl(0, 0%, 84%);
+}
+
+.latest-slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: pink; */
+  flex-grow: 3;
+  flex-shrink: 0;
+  /* border: 1.5px solid black; */
+  margin: 0 0.5rem;
+  box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 0.25em 0.4em;
+}
+
+.slideImg {
+  height: 70%;
+  width: 100%;
+}
+
+.add-to-cart {
+  padding: 0.3em 0.75em;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+}
+/*****************************************************
+** Latest collection section including carousel end  
+*****************************************************/
+
+/*****************************************************
+** Shop men and women section start 
+*****************************************************/
+.shop-men-women {
+  /* background-color: rosybrown; */
+  height: 70vh;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.shop-men-women-img {
+  height: 100%;
+  width: 50%;
+}
+
+.shop-men-women-btn {
+  position: absolute;
+}
+/*****************************************************
+** Shop men and women section end 
+*****************************************************/
