@@ -25,6 +25,10 @@ body {
 main {
   padding: 0 4.75rem;
 }
+
+button {
+  cursor: pointer;
+}
 /**************************
  ** Reset end
 ***************************/
@@ -231,10 +235,12 @@ main {
 *****************************************************/
 .shop-men-women {
   /* background-color: rosybrown; */
+  display: flex;
+
   height: 70vh;
   padding: 0.5rem;
   box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.35);
-  position: relative;
+  /* position: relative; */
 }
 
 .shop-men-women-img {
@@ -242,9 +248,73 @@ main {
   width: 50%;
 }
 
-.shop-men-women-btn {
-  position: absolute;
+.shop-men-women-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* font-size: 0.2rem; */
+  /* border: 2px solid black; */
+  justify-content: space-around;
+  align-items: center;
 }
+
+.shop-men,
+.shop-women {
+  width: 90%;
+  border: 5px solid white;
+  padding: 0.7em;
+  color: white;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3), 0px 0px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-men {
+  background-color: hsl(244, 17%, 28%);
+}
+
+.shop-women {
+  background-color: hsl(243, 100%, 69%);
+}
+
+.shop-men-title,
+.shop-women-title {
+  margin-bottom: 0.5rem;
+}
+
+.shop-text {
+  line-height: 1.6rem;
+  text-align: center;
+}
+
+.shop-men-women-btn {
+  padding: 0.5em 2.75em;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shop-men-btn {
+  background-color: hsl(243, 100%, 69%);
+}
+
+.shop-men-btn:hover {
+  background-color: hsl(243, 100%, 75%);
+}
+
+.shop-women-btn {
+  background-color: hsl(244, 17%, 28%);
+}
+
+.shop-women-btn:hover {
+  background-color: hsl(244, 17%, 34%);
+}
+
 /*****************************************************
 ** Shop men and women section end 
 *****************************************************/
