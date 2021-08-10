@@ -12,6 +12,7 @@
 a {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 
 li {
@@ -28,6 +29,7 @@ main {
 
 button {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 /**************************
@@ -97,7 +99,8 @@ button {
 }
 
 .logo-header {
-  height: 5%;
+  height: 50px;
+  width: 200px;
 }
 
 .browse-btn {
@@ -226,6 +229,12 @@ button {
   padding: 0.3em 0.75em;
   font-size: 1.25rem;
   letter-spacing: 0.1em;
+  background-color: var(--secondaryColor);
+  color: white;
+}
+
+.add-to-cart:hover {
+  background-color: hsl(243, 100%, 74%);
 }
 /*****************************************************
 ** Latest collection section including carousel end  
@@ -369,4 +378,108 @@ button {
 
 /*****************************************************
 ** Newsletter Section end
+*****************************************************/
+
+/*****************************************************
+** Footer start
+*****************************************************/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: hsl(244, 17%, 48%);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid green; */
+}
+
+.contact-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.contact-email {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.contact-phone {
+  font-size: 1.6rem;
+}
+
+.logo-footer {
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid pink; */
+}
+
+.social-links-container {
+  margin-bottom: 1.5rem;
+}
+
+.social-title {
+  font-size: 2rem;
+}
+
+.social-icons-container,
+.payment-icons-container {
+  font-size: 2.25rem;
+}
+
+.social-icons-container .fab {
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons-container .fab:hover {
+  color: var(--secondaryColor);
+}
+
+.payment-method-container {
+  margin-bottom: 1.5rem;
+}
+
+.payment-title {
+  font-size: 2rem;
+}
+
+.refound-terms-container {
+  /* border: 3px solid pink; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.refound-term-btn {
+  padding: 0.5em 0.75em;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: var(--secondaryColor);
+}
+
+.refound-term-btn:first-child {
+  margin-right: 1rem;
+}
+
+.refound-term-btn a {
+  color: white;
+}
+
+.refound-term-btn:hover {
+  background-color: hsl(243, 100%, 74%);
+}
+
+/*****************************************************
+** Footer end
 *****************************************************/
