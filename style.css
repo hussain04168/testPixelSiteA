@@ -131,14 +131,19 @@ button {
   color: white;
 }
 
-.fa-cart-plus {
+.fa-shopping-cart {
   color: hsl(0, 0%, 100%);
   /* background-color: yellow; */
   font-size: 1.5rem;
   position: relative;
+  cursor: pointer;
 }
 
-/* .cart-amount {
+.cart-amount-container {
+  position: relative;
+}
+
+.cart-amount {
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -146,9 +151,9 @@ button {
   transform: translateX(-50%);
   background-color: var(--primaryColor);
   color: white;
-  padding: 0.15em;
+  padding: 0.15em 0.2em;
   border-radius: 50%;
-} */
+}
 /**********************************************
 ** Header including Navigation and Hero end  
 ***********************************************/
