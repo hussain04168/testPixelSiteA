@@ -124,7 +124,7 @@
 
       <!-- Browse button start -->
       <button class="browse-btn">
-        <a href="#latest">Browse⇣</a>
+        <a id="browseBtn" href="#latest">Browse⇣</a>
       </button>
       <!-- Browse button end -->
     </header>
@@ -353,8 +353,13 @@
     ----------------------->
 
     <!-- pixel event start -->
-    <script type="text/javascript">
+    <script>
       ttq.track("ViewContent");
+    </script>
+    <script type="text/javascript">
+      document.getElementById("browseBtn").onclick = function () {
+        ttq.track("ClickButton");
+      };
     </script>
     <!-- pixel event end -->
   </body>
