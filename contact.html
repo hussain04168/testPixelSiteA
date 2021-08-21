@@ -165,15 +165,22 @@
           </div>
           <!-- phone input end -->
 
-          <button type="submit">Submit</button>
+          <button id="submitForm" type="submit">Submit</button>
         </form>
       </section>
     </main>
     <!-- Contact end -->
 
     <!-- pixel event start -->
-    <script type="text/javascript">
+
+    <script>
       ttq.track("ViewContent");
+    </script>
+
+    <script type="text/javascript">
+      document.getElementById("submitForm").onclick = function () {
+        ttq.track("SubmitForm");
+      };
     </script>
     <!-- pixel event end -->
   </body>
