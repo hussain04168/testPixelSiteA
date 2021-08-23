@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <!-- TikTok pixel start -->
-
     <script>
       !(function (w, d, t) {
         w.TiktokAnalyticsObject = t;
@@ -30,30 +29,31 @@
         for (var i = 0; i < ttq.methods.length; i++)
           ttq.setAndDefer(ttq, ttq.methods[i]);
         (ttq.instance = function (t) {
-          for (var e = ttq.i[t] || [], n = 0; n < ttq.methods.length; n++)
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
             ttq.setAndDefer(e, ttq.methods[n]);
           return e;
         }),
           (ttq.load = function (e, n) {
-            var i = "https://analytics.tiktok.c om/i18n/pixel/events.js";
-            (ttq.i = ttq.i || {}),
-              (ttq.i[e] = []),
-              (ttq.i[e].u = i),
-              (ttq.t = ttq.t || {}),
-              (ttq.t[e] = +new Date()),
-              (ttq.o = ttq.o || {}),
-              (ttq.o[e] = n || {});
+            var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = i),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
             var o = document.createElement("script");
             (o.type = "text/javascript"),
               (o.async = !0),
-              (o.src = i + "?sdkid=" + e + "& lib=" + t);
+              (o.src = i + "?sdkid=" + e + "&lib=" + t);
             var a = document.getElementsByTagName("script")[0];
             a.parentNode.insertBefore(o, a);
           });
-        ttq.load("C3UTDL1U9OSLU1GC0KK0");
+        ttq.load("C4GCUEVM9G8R5RJ0R72G");
         ttq.page();
       })(window, document, "ttq");
     </script>
+
     <!-- TikTok pixel end -->
 
     <!-- google analytics start --
@@ -132,7 +132,7 @@
             ><input
               type="text"
               name="first-name"
-              id=""
+              id="firstName"
               class="first-name-input"
             />
           </div>
@@ -145,7 +145,7 @@
             ><input
               type="text"
               name="second-name"
-              id=""
+              id="secondName"
               class="second-name-input"
             />
           </div>
@@ -154,14 +154,19 @@
           <!-- email input start -->
           <div class="email-container">
             <label for="email" class="email-label">Email</label
-            ><input type="email" name="email" id="" class="email-input" />
+            ><input type="email" name="email" id="email" class="email-input" />
           </div>
           <!-- email input end -->
 
           <!-- phone input start -->
           <div class="phone-container">
             <label for="phone" class="phone-label">Phone</label
-            ><input type="tel" name="phone" id="" class="phone-input" />
+            ><input
+              type="tel"
+              name="phone"
+              id="phoneNumber"
+              class="phone-input"
+            />
           </div>
           <!-- phone input end -->
 
@@ -178,6 +183,12 @@
     </script>
 
     <script type="text/javascript">
+      ttq.identify({
+        external_id: "123",
+        email: "foo@bar.com",
+        phone_number: "+19171234567",
+      });
+
       document.getElementById("submitForm").onclick = function () {
         ttq.track("SubmitForm");
       };
