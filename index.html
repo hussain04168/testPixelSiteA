@@ -122,8 +122,8 @@
       <!-- Navigation end -->
 
       <!-- Browse button start -->
-      <button class="browse-btn">
-        <a id="browseBtn" href="#latest">Browse⇣</a>
+      <button id="browseBtn" class="browse-btn">
+        <a href="#">Browse⇣</a>
       </button>
       <!-- Browse button end -->
     </header>
@@ -183,7 +183,7 @@
               />
               <h4 class="slide-name">Product</h4>
               <h4 class="slide-price">£30</h4>
-              <button class="add-to-cart">add to cart</button>
+              <button id="blueHoodie" class="add-to-cart">add to cart</button>
             </div>
             <!-- Slide 3 end -->
 
@@ -290,7 +290,7 @@
         <div class="newsletter-img-btn-container">
           <img src="/Images/FormImg.png" alt="" class="newsletter-img" />
 
-          <button class="newsletter-btn">Sign up</button>
+          <button id="newsletter-btn" class="newsletter-btn">Sign up</button>
         </div>
       </section>
       <!-------------------------------------- 
@@ -352,12 +352,31 @@
     ----------------------->
 
     <!-- pixel event start -->
+
     <script>
+      ttq.identify({
+        email: "email@example.com",
+        phone_number: "+15551234567",
+      });
+      document.getElementById("blueHoodie").onclick = function () {
+        ttq.track("AddToCart", {
+          content_id: "3",
+          content_type: "product",
+          content_name: "Light Blue Hoodie",
+          quantity: 1,
+          price: 30,
+          value: 32,
+          currency: "GBP",
+        });
+      };
       ttq.track("ViewContent");
-    </script>
-    <script type="text/javascript">
+
       document.getElementById("browseBtn").onclick = function () {
         ttq.track("ClickButton");
+      };
+
+      document.getElementById("newsletter-btn").onclick = function () {
+        ttq.track("CompleteRegistration");
       };
     </script>
     <!-- pixel event end -->

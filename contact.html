@@ -170,19 +170,17 @@
           </div>
           <!-- phone input end -->
 
-          <button id="submitForm" type="submit">Submit</button>
+          <a id="submitForm">Submit</a>
         </form>
       </section>
     </main>
     <!-- Contact end -->
 
     <!-- pixel event start -->
-
-    <script>
-      ttq.track("ViewContent");
-    </script>
+    <script></script>
 
     <script type="text/javascript">
+      ttq.track("ViewContent");
       ttq.identify({
         external_id: "123",
         email: "foo@bar.com",
@@ -190,7 +188,8 @@
       });
 
       document.getElementById("submitForm").onclick = function () {
-        ttq.track("SubmitForm");
+        ttq.track("ClickButton");
+        console.log("clicked");
       };
     </script>
     <!-- pixel event end -->
